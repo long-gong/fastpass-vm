@@ -1,5 +1,12 @@
 #!/bin/bash
 
+# This script is created based one the following scripts or tutorials:
+#   * https://github.com/lorenzosaino/ubuntu-dpdk/blob/master/setup.sh
+#   * http://dpdk.org/doc/quick-start
+#   * http://fastpass.mit.edu/#download
+
+
+
 # Install dependencies
 sudo apt-get update --fix-missing
 sudo apt-get install -y git build-essential wget hugepages libpcap-dev linux-headers-`uname -r`
@@ -34,6 +41,7 @@ popd
 
 export RTE_SDK=`pwd`/dpdk-16.04
 export RTE_TARGET=build
+
 
 # Clone fasspass
 git clone https://github.com/yonch/fastpass.git
